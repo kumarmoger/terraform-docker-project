@@ -17,8 +17,6 @@ resource "aws_instance" "webserver" {
 #!/bin/bash
 set -e
 
-exec > /var/log/user-data.log 2>&1
-
 apt update -y
 apt install -y docker.io git
 
